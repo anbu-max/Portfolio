@@ -41,14 +41,10 @@ window.addEventListener('resize', () => {
 });
 
 // Blog post redirect
-document.querySelectorAll('.blog-post').forEach(post => {
-  post.style.cursor = "pointer";
-  post.addEventListener('click', () => {
-    // Each blog can have its own page
-   const link= post.getAttribute('data-link');
-   if(link){
-       window.location.href = link;
-    }
+document.querySelectorAll(".blog-post").forEach((post) => {
+  post.addEventListener("click", () => {
+    const link = post.getAttribute("data-link");
+    window.location.href = link;
   });
 });
 
