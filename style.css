@@ -1,0 +1,372 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    background: #fafafa;
+    color: #222;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    transform: scale(1);
+}
+
+.nav-links a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+/* Quote */
+.quote {
+    text-align: center;
+    padding: 2rem;
+    font-style: italic;
+    background: #fff;
+}
+
+.quote span {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Information Section */
+.info {
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.info h2 {
+    margin-bottom: 1rem;
+}
+
+.info h3 {
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+.info ul li {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Projects Section */
+.projects {
+    padding: 3rem 2rem;
+    background: #f9f9f9;
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Blog Section */
+.blog {
+    padding: 3rem 2rem;
+}
+
+.blog h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.blog-list {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.blog-post {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.blog-post h3 {
+    margin-bottom: 0.3rem;
+}
+
+.blog-post .date {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 0.8rem;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #f9f9f9;
+}
+
+.contact h2 {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    color: #888;
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/*Updated code*/
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 1.1rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .info,
+    .blog-list {
+        max-width: 1000px;
+    }
+}
+/*Blog POST TEMPLATE Code*/
+
+ .blog-container {
+     max-width: 1400px;
+     margin: 5rem auto;
+     padding: 2rem;
+     background: #fff;
+     border-radius: 12px;
+     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+     line-height: 1.8;
+ }
+
+ .blog-container h1 {
+     font-size: 2.2rem;
+     margin-bottom: 0.5rem;
+ }
+
+ .blog-container .date {
+     font-size: 0.9rem;
+     color: #666;
+     margin-bottom: 1.5rem;
+ }
+
+ .blog-container h2 {
+     margin-top: 2rem;
+     font-size: 1.5rem;
+     color: #333;
+ }
+
+ .blog-container pre {
+     background: #f4f4f4;
+     padding: 1rem;
+     border-radius: 6px;
+     overflow-x: auto;
+     margin: 1rem 0;
+     font-size: 0.9rem;
+ }
+
+ .blog-container img {
+     max-width: 100%;
+     border-radius: 8px;
+     margin: 1rem 0;
+ }
+
+ .back-link {
+     display: inline-block;
+     margin-top: 2rem;
+     text-decoration: none;
+     color: #fff;
+     background: #333;
+     padding: 0.6rem 1.2rem;
+     border-radius: 6px;
+     transition: background 0.3s ease;
+ }
+
+ .back-link:hover {
+     background: #555;
+ }
+
+/* Navbar styles */
+header {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.blog-nav {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog-nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.blog-nav ul {
+    list-style: none;
+    display: flex;
+    /* 👈 Makes the nav items horizontal */
+    gap: 2rem;
+    /* 👈 Space between links */
+}
+
+.blog-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.blog-nav ul li a:hover {
+    color: #0077ff;
+    transform: scale(1.05);
+}
