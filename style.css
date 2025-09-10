@@ -370,3 +370,64 @@ header {
     color: #0077ff;
     transform: scale(1.05);
 }
+
+
+
+              /* --- Read More frosted-wrap + button --- 
+              INFORMARION HTML PAGE*/
+.read-more-wrap {
+    position: relative;
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 6px;
+    /* keep overflow visible so the pseudo-element blur looks natural */
+}
+
+.read-more-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    /* extend slightly beyond button */
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    /* subtle light frosted layer */
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+    /* let clicks go through to the button */
+    z-index: 0;
+    transition: opacity 0.18s ease;
+}
+
+/* darker frosted in dark contexts (if you later use dark theme) */
+body.dark .read-more-wrap::before {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* the actual button stays on top */
+.read-more-btn {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: #000;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.read-more-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* small responsive tweak so it keeps centered on narrow screens */
+@media (max-width: 600px) {
+    .read-more-wrap {
+        display: block;
+        text-align: center;
+    }
+}
