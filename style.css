@@ -168,44 +168,67 @@ ul {
 }
 
 /* Blog Section */
+/* --- Recent Writing Section (minimal) --- */
+/* --- Recent Writing Section (centered + slight scale) --- */
 .blog {
-    padding: 3rem 2rem;
+    max-width: 900px;
+    /* keeps it narrow and centered */
+    margin: 5rem auto;
+    /* centers the whole section */
+    padding: 0 1.5rem;
 }
 
 .blog h2 {
+    font-size: 2rem;
+    font-weight: 700;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
 }
 
 .blog-list {
-    display: grid;
-    gap: 1.5rem;
-    max-width: 800px;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .blog-post {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    border: 1px solid #eee;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1.5rem;
+    transition: transform 0.2s ease;
+    /* 👈 smooth scale */
+}
+
+.blog-post:last-child {
+    border-bottom: none;
 }
 
 .blog-post:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    transform: scale(1.02);
+    /* 👈 slight hover scale */
 }
 
 .blog-post h3 {
-    margin-bottom: 0.3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 0.3rem;
+    color: #111;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .blog-post .date {
-    font-size: 0.85rem;
-    color: #888;
+    font-size: 0.9rem;
+    color: #777;
     margin-bottom: 0.8rem;
+}
+
+.blog-post p {
+    margin: 0;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
 }
 
 /* Contact */
@@ -430,4 +453,78 @@ body.dark .read-more-wrap::before {
         display: block;
         text-align: center;
     }
+}
+
+/*Blog Button*/
+.blog .read-more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+/* --- Blogs Page --- */
+/* --- All Blogs Page (Minimal Style) --- */
+
+.allblogs-container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.allblogs-container h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: #111;
+}
+.blog-title:hover {
+    transform: scale(1.02);
+    /* 👈 slight hover scale */
+}
+.blog-title {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1.5rem;
+    transition: transform 0.2s ease;
+    /* 👈 smooth scale */
+}
+
+/* Each blog entry */
+.blog-title {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    /* thin separator */
+}
+
+.blog-title:last-child {
+    border-bottom: none;
+    /* no line after last */
+}
+
+/* Blog Title */
+.blog-title h2 {
+    margin: 0 0 0.3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #111;
+}
+
+.blog-title h2 a {
+    text-decoration: none;
+    /* no underline */
+    color: inherit;
+}
+
+/* Meta info */
+.blog-title .meta {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 0.8rem;
+}
+
+/* Blog snippet/summary */
+.blog-title p {
+    margin: 0;
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
 }
