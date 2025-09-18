@@ -670,3 +670,156 @@ body.dark .read-more-wrap::before {
 .resume-download a:hover {
     text-decoration: underline;
 }
+
+
+
+
+
+/* Updated code ends here */
+/*Dark Mode*/
+/* Navbar toggle button */
+/* 🌞 Light Mode (Default) */
+/* ---------------------------
+   UNIVERSAL DARK MODE OVERRIDES
+   Paste at the END of style.css
+   --------------------------- */
+
+body.dark-mode {
+    background: #000 !important;
+    /* full black page background */
+    color: #ffffff !important;
+    /* primary text as white */
+    transition: background .28s ease, color .28s ease;
+    scroll-behavior: smooth;
+}
+
+/* make sure everything transitions smoothly */
+body.dark-mode * {
+    transition: color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+/* NAV / HEADER / HERO / QUOTE / CONTACT / FOOTER — make backgrounds dark and text white */
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode .hero,
+body.dark-mode .quote,
+body.dark-mode .contact,
+body.dark-mode footer,
+body.dark-mode .projects,
+body.dark-mode .blog,
+body.dark-mode .blogs-container,
+body.dark-mode .info-container,
+body.dark-mode .blog-container {
+    background: transparent !important;
+    /* remove any white panels — let page bg show */
+    color: #ffffff !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* HEADINGS & TEXT — everything white (subtitles you can keep slightly muted if desired) */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode label,
+body.dark-mode small,
+body.dark-mode .meta,
+body.dark-mode .date,
+body.dark-mode .subtitle {
+    color: #ffffff !important;
+}
+
+/* if you want a softer gray for less-important text (optional)
+   remove the rule below if you want 100% white everywhere */
+body.dark-mode .meta,
+body.dark-mode .date,
+body.dark-mode small {
+    color: #d0d0d0 !important;
+}
+
+/* remove cards/boxes/shadows in dark mode (no boxed sections) */
+body.dark-mode .card,
+body.dark-mode .project-card,
+body.dark-mode .blog-post,
+body.dark-mode .project-grid>*,
+body.dark-mode .project-card *,
+body.dark-mode .blog-list>* {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+/* Projects grid items should keep layout but not show boxes */
+body.dark-mode .project-grid,
+body.dark-mode .project-grid .project-card {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Links — white by default; smooth blue glow on hover */
+body.dark-mode a,
+body.dark-mode a:link,
+body.dark-mode a:visited {
+    color: #ffffff !important;
+    text-decoration: none;
+    transition: color .22s ease, text-shadow .22s ease;
+}
+
+body.dark-mode a:hover,
+body.dark-mode a:focus {
+    color: #66b7ff !important;
+    /* soft bright blue */
+    text-shadow: 0 0 18px rgba(102, 183, 255, 0.18);
+    outline: none;
+}
+
+/* Buttons (neutral) — keep readable */
+body.dark-mode .btn,
+body.dark-mode .read-more-btn,
+body.dark-mode .resume-link {
+    background: rgba(255, 255, 255, 0.06) !important;
+    /* subtle surface if needed */
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: none !important;
+}
+
+/* If you had gradient/hero overlays, ensure hero text is white */
+body.dark-mode .hero h1,
+body.dark-mode .hero p,
+body.dark-mode .quote {
+    color: #ffffff !important;
+}
+
+/* Footer specific */
+body.dark-mode footer,
+body.dark-mode .footer {
+    background: transparent !important;
+    color: #cfcfcf !important;
+}
+
+/* Ensure code blocks are legible (optional) */
+body.dark-mode pre,
+body.dark-mode code {
+    background: rgba(255, 255, 255, 0.03) !important;
+    color: #eaeaea !important;
+    border: none !important;
+}
+
+/* Ensure any borders are muted or removed */
+body.dark-mode hr,
+body.dark-mode .divider {
+    border-color: rgba(255, 255, 255, 0.06) !important;
+    opacity: 0.08;
+}
+
+/* final safety net: if something stubborn still uses inline background */
+body.dark-mode [style*="background"] {
+    background-color: transparent !important;
+}
