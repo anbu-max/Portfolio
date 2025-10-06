@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Collections: Unfair Advantage tips</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <style>
+            ol[type="I"] li {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+}
+table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+.tip {
+  background: #eef9f1;
+  border-left: 4px solid #2ecc71;
+  padding: 10px;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+
+    </style>
+  <!-- Navbar -->
+  <header>
+    <nav class="blog-nav">
+      <div class="logo">SSS</div>
+      <ul>
+        <li><a href="../index.html#info">Information</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#blog">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Blog Content -->
+  <main class="blog-container">
+    <h1>Java Collections : Unfair Advantage tips</h1>
+    <p class="date">Published on 15 Sep 2025</p>
+
+    <p>High performers don’t memorize syntax — they think in <strong>patterns</strong>. If you can instantly choose the right Java Collection for a problem, you already look like a pro. Here’s your ultimate guide to decoding interview problems using the <strong>80/20 Java Collections System</strong>.</p>
+
+    <h2>I. ArrayList — The Go-To Dynamic Array</h2>
+    <p><strong>When to use:</strong> Fast random access, sequential storage, dynamic resizing.</p>
+    <ol type="I">
+      <li>Need fast access by index</li>
+      <li>Storing ordered data</li>
+      <li>Mostly reading or appending</li>
+    </ol>
+    <p><strong>Interview Keywords:</strong> “store elements in sequence”, “access by index”, “need dynamic array”</p>
+    <pre><code>List&lt;Integer&gt; nums = new ArrayList&lt;&gt;();
+nums.add(10);
+nums.add(20);
+System.out.println(nums.get(1)); // 20</code></pre>
+
+    <h2>II. LinkedList — When You Love Insertions</h2>
+    <p><strong>When to use:</strong> Frequent insertions/deletions, queue/deque structures.</p>
+    <ol type="I">
+      <li>Insert/remove frequently</li>
+      <li>Reversal or traversal required</li>
+      <li>Queue or stack implementation</li>
+    </ol>
+    <pre><code>LinkedList&lt;String&gt; list = new LinkedList&lt;&gt;();
+list.addFirst("start");
+list.addLast("end");</code></pre>
+
+    <h2>III. HashMap — The Brain of Most Problems</h2>
+    <p><strong>When to use:</strong> Key-value mapping, frequency counting, grouping.</p>
+    <ol type="I">
+      <li>Count frequency of items</li>
+      <li>Find duplicates or missing elements</li>
+      <li>Lookup using key</li>
+    </ol>
+    <p><strong>Interview Keywords:</strong> “count frequency”, “group by key”, “find duplicates”</p>
+    <pre><code>Map&lt;Character, Integer&gt; freq = new HashMap&lt;&gt;();
+for (char c : s.toCharArray())
+    freq.put(c, freq.getOrDefault(c, 0) + 1);</code></pre>
+
+    <h2>IV. HashSet — The Duplicate Bouncer</h2>
+    <p><strong>When to use:</strong> Unique storage, quick lookup, duplicate detection.</p>
+    <ol type="I">
+      <li>Find unique elements</li>
+      <li>Detect cycles or repetitions</li>
+      <li>Membership tests</li>
+    </ol>
+    <pre><code>Set&lt;Integer&gt; seen = new HashSet&lt;&gt;();
+for (int num : arr) {
+    if (seen.contains(num)) return true;
+    seen.add(num);
+}</code></pre>
+
+    <h2>V. TreeMap — The Ordered Key Genius</h2>
+    <p><strong>When to use:</strong> Sorted keys, range-based queries, nearest value search.</p>
+    <ol type="I">
+      <li>Find nearest greater/smaller</li>
+      <li>Keep keys sorted</li>
+      <li>Range queries</li>
+    </ol>
+    <pre><code>TreeMap&lt;Integer, String&gt; map = new TreeMap&lt;&gt;();
+map.put(3, "C");
+map.put(1, "A");
+map.put(2, "B");
+System.out.println(map); // {1=A, 2=B, 3=C}</code></pre>
+
+    <h2>VI. PriorityQueue — The Secret Weapon (Min/Max Heap)</h2>
+    <p><strong>When to use:</strong> Always fetch smallest/largest efficiently, top K problems.</p>
+    <ol type="I">
+      <li>Kth largest/smallest</li>
+      <li>Stream median</li>
+      <li>Dijkstra’s or shortest path</li>
+    </ol>
+    <pre><code>PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;();
+pq.add(5);
+pq.add(1);
+pq.add(3);
+System.out.println(pq.poll()); // 1</code></pre>
+
+    <h2>VII. Stack — The Reverse Engineer</h2>
+    <p><strong>When to use:</strong> LIFO logic, parsing, recursion, or backtracking.</p>
+    <ol type="I">
+      <li>Balanced parentheses</li>
+      <li>Undo/Redo</li>
+      <li>Expression evaluation</li>
+    </ol>
+    <pre><code>Stack&lt;Character&gt; st = new Stack&lt;&gt;();
+for (char c : s.toCharArray()) {
+    if (c == '(') st.push(c);
+    else if (c == ')' && !st.isEmpty()) st.pop();
+}</code></pre>
+
+    <h2>VIII. Queue / Deque — The BFS Engine</h2>
+    <p><strong>When to use:</strong> FIFO logic, task scheduling, or traversal.</p>
+    <ol type="I">
+      <li>Level order traversal</li>
+      <li>Sliding window maximum</li>
+      <li>Cache (LRU) design</li>
+    </ol>
+    <pre><code>Queue&lt;Integer&gt; q = new LinkedList&lt;&gt;();
+q.add(1);
+q.add(2);
+System.out.println(q.poll()); // 1</code></pre>
+
+    <h2>⚡ Quick Decision Map</h2>
+    <table>
+      <tr><th>Problem Type</th><th>Best Collection</th><th>Why</th></tr>
+      <tr><td>Count frequencies</td><td>HashMap</td><td>Key-value mapping</td></tr>
+      <tr><td>Detect duplicates</td><td>HashSet</td><td>Fast lookup</td></tr>
+      <tr><td>Maintain order</td><td>ArrayList</td><td>Ordered storage</td></tr>
+      <tr><td>Frequent insert/remove</td><td>LinkedList</td><td>O(1) insertion</td></tr>
+      <tr><td>Sorted key-value pairs</td><td>TreeMap</td><td>Natural order</td></tr>
+      <tr><td>Kth largest/smallest</td><td>PriorityQueue</td><td>Efficient min/max</td></tr>
+      <tr><td>Reverse/backtrack</td><td>Stack</td><td>LIFO behavior</td></tr>
+      <tr><td>Level-order traversal</td><td>Queue</td><td>FIFO behavior</td></tr>
+    </table>
+
+    <p class="tip">🎯 Master this table and you’ll pick the right data structure in seconds during interviews — that’s what separates coders from engineers.</p>
+
+    <a href="../index.html#blog" class="back-link">← Back to Blog</a>
+  </main>
+
+  <footer>
+    <p>© 2023 - 2025 | Anbu</p>
+  </footer>
+</body>
+</html>
