@@ -12,18 +12,29 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
 
 // Mobile navbar toggle
 const navbar = document.querySelector('.navbar');
+const nav = document.querySelector('.navbar nav');
 const navLinks = document.querySelector('.nav-links');
+const themeToggle = document.getElementById('theme-toggle');
 let menuBtn;
 
 function createMenuButton() {
   menuBtn = document.createElement('div');
   menuBtn.classList.add('menu-btn');
   menuBtn.innerHTML = "☰"; // hamburger icon
-  navbar.insertBefore(menuBtn, navLinks);
+  navbar.insertBefore(menuBtn, nav);
 
   menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    // Close menu when clicking outside
+    document.addEventListener('click', closeMenuOnClickOutside);
   });
+}
+
+function closeMenuOnClickOutside(event) {
+  if (!navbar.contains(event.target)) {
+    navLinks.classList.remove('active');
+    document.removeEventListener('click', closeMenuOnClickOutside);
+  }
 }
 
 // only show menu button on mobile
@@ -66,4 +77,44 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer) {
 
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
+});
+
+// Dark Mode Toggle - Wait for DOM to load
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Check for saved theme preference or default to light mode
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    body.classList.add('dark');
+    updateThemeIcon();
+  }
+
+  function updateThemeIcon() {
+    if (!themeToggle) return;
+
+    const moonIcon = themeToggle.querySelector('.fa-moon');
+    const sunIcon = themeToggle.querySelector('.fa-sun');
+
+    if (body.classList.contains('dark')) {
+      moonIcon.style.display = 'none';
+      sunIcon.style.display = 'inline';
+    } else {
+      moonIcon.style.display = 'inline';
+      sunIcon.style.display = 'none';
+    }
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+
+      // Save theme preference
+      const theme = body.classList.contains('dark') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+
+      updateThemeIcon();
+    });
+  }
 });

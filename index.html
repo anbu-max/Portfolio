@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title> Anbu| Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 </head>
+
 <body>
   <!-- Navbar -->
   <header class="navbar">
@@ -18,23 +23,27 @@
       <ul class="nav-links">
         <li><a href="#info">Information</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
+        <li><a href="#Skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun" style="display: none;"></i>
+      </button>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <h1>Ciao, I'm Anbu Selvan.</h1>
-    <p>2026 University Graduate | Software Developer and Web dev</p>
+    <p>2026 University Graduate | Software Developer and backend dev</p>
     <p>Your friendly neighbourhood software engineer </p>
-    
+
   </section>
 
   <!-- Quote -->
   <section class="quote">
-    <p>“No matter what the world says, I just walk my own path.”</p>
+    <p style="color: purple;">“No matter what the world says, I just walk my own path.”</p>
     <span>- Roronoa Zoro</span>
   </section>
 
@@ -42,8 +51,8 @@
   <section id="info" class="info">
     <h2>Information</h2>
     <p>
-      Hi there, I'm Anbu Selvan  
-      I build my own products, alongside working with companies to help them build theirs.  
+      Hi there, I'm Anbu Selvan
+      I build my own products, alongside working with companies to help them build theirs.
       Passionate about tech , problem-solving, and web development.
     </p>
 
@@ -53,23 +62,17 @@
       <li>Sri Vinayaga Matric Higher secondary school </li>
     </ul>
 
-    <h3>Experience</h3>
-    <ul>
-      <li>Pramila Foundation - Senior Front-End Engineer (Mar 2025 - Jun 2025)</li>
-      <li>AICTE - Summer Internship (May 2025 - Jun 2025)</li>
-      <li>Pusher - Front-End Developer (Sep 2022 - Jan 2023)</li>
-    </ul>
-
 
     <!-- Read more wrapper with subtle frosted blur behind the button -->
-  <div class="read-more-wrap">
-    <a href="information.html" class="btn read-more-btn">Read More</a>
-  </div>
+    <div class="read-more-wrap">
+      <a href="information.html" class="btn read-more-btn">Read More</a>
+    </div>
 
-  <!-- Optional small resume link (keeps homepage clean) -->
-  <p style="margin-top:0.6rem; font-size:0.95rem; color: #666;">
-    Or <a href="https://drive.google.com/uc?export=download&id=1vLJaYv8E0XmO0puM1PXtrZA71kMHo1IL" target="_blank" rel="noopener">download my resume</a>.
-  </p>
+    <!-- Optional small resume link (keeps homepage clean) -->
+    <p style="margin-top:0.6rem; font-size:0.95rem; color: #666;">
+      Or <a href="https://drive.google.com/uc?export=download&id=1vLJaYv8E0XmO0puM1PXtrZA71kMHo1IL" target="_blank"
+        rel="noopener">download my resume</a>.
+    </p>
 
   </section>
 
@@ -79,16 +82,18 @@
     <h2>Personal Projects</h2>
     <div class="project-grid">
       <div class="project-card">
-        <h3>Football Stats</h3>
-        <p>A collaborative Web-based 2D drawing tool for strategising soccer.</p>
+        <h3>MovieDex</h3>
+        <p>Used React and OMDB api to show movie details and add favorites</p>
       </div>
       <div class="project-card">
-        <h3>The Aviator Game</h3>
-        <p>An exciting flying game created using Blender and Three.js.</p>
+        <h3>Todo - Auth</h3>
+        <p>Used SpringBoot , jpa/Hibernate , JWT for authentication, PostgreSQL and REST API for CRUD operations</p>
       </div>
       <div class="project-card">
-        <h3>PokiPedia</h3>
-        <p>A responsive web app with detailed Pokémon information.</p>
+        <h3>URL shortner</h3>
+        <p>Built a URL shortening service that converts long URLs into short, shareable links with optional expiration
+          support.
+          The application exposes RESTful APIs to generate short URLs and handle redirection requests efficiently.</p>
       </div>
       <div class="project-card">
         <h3>yapg</h3>
@@ -97,60 +102,100 @@
     </div>
   </section>
 
-  <!-- Blog Section -->
-  <section id="blog" class="blog">
-  <h2>Recent Writing</h2>
-  <div class="blog-list">
-    <article class="blog-post" data-link="blogs/post1.html">
-      <h3>Mastering DSA: 80/20 Principle</h3>
-      <p class="date">Published on 10 Sep 2025</p>
-      <p>Solve patterns instead of solving useless problems</p>
-    </article>
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
 
-    <article class="blog-post" data-link="blogs/post2.html">
-      <h3> Java Collections: Unfair Advantage tips</h3>
-      <p class="date">Published on 15 sep 2025</p>
-      <p>Know what to use just by looking at the problem</p>
-    </article>
+    <div class="skills-container">
+      <!-- Skill Item -->
+      <div class="skill">
+        <i class="fa-brands fa-java"></i>
+        <span>Java</span>
+      </div>
 
-    <article class="blog-post" data-link="blogs/post3.html">
-      <h3>Future CSS: Container Queries</h3>
-      <p class="date">Published on 22 May 2025</p>
-      <p>A look at the future of CSS with container queries.</p>
-    </article>
-    
-  </div>
-  <!-- Read more button with frosted blur -->
-  <div class="read-more-wrap">
-    <a href="blogs.html" class="btn read-more-btn">Read More Blogs</a>
-  </div>
-</section>
+      <div class="skill">
+        <i class="fa-brands fa-python"></i>
+        <span>Python</span>
+      </div>
+
+      <div class="skill">
+        <i class="fa-brands fa-html5"></i>
+        <span>HTML</span>
+      </div>
+
+      <div class="skill">
+        <i class="fa-brands fa-css3-alt"></i>
+        <span>CSS</span>
+      </div>
+
+      <div class="skill">
+        <i class="fa-brands fa-js"></i>
+        <span>JavaScript</span>
+      </div>
+
+      <div class="skill">
+        <i class="fa-brands fa-react"></i>
+        <span>React</span>
+      </div>
+
+      <div class="skill">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" />
+        <span>Spring Boot</span>
+      </div>
+
+      <div class="skill">
+        <i class="fa-brands fa-git-alt"></i>
+        <span>Git</span>
+      </div>
+
+      <div class="skill">
+        <i class="fa-brands fa-github"></i>
+        <span>GitHub</span>
+      </div>
+
+      <div class="skill">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
+        <span>PostgreSQL</span>
+      </div>
+
+      <div class="skill">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" />
+        <span>Postman</span>
+      </div>
+
+      <div class="skill">
+        <i class="fas fa-database"></i>
+        <span>SQL</span>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Contact -->
 
   <!-- Contact Section -->
-<section id="contact" class="contact-container">
-  <h2>Contact</h2>
-  <p>If you'd like to get in touch, you can reach me using the following methods.  
-     I'm also available for freelance projects.</p>
+  <section id="contact" class="contact-container">
+    <h2>Contact</h2>
+    <p>If you'd like to get in touch, you can reach me using the following methods.
+      I'm also available for freelance projects.</p>
 
-  <div class="contact-links">
-    <a href="mailto:anbuselvan32520@gmail.com">
-      <i class="fas fa-envelope"></i> Email
-    </a>
-    <a href="https://leetcode.com/u/AnbuselvanA/" target="_blank">
-      <i class="fas fa-code"></i> LeetCode
-    </a>
-    <a href="https://github.com/anbu-max" target="_blank">
-      <i class="fab fa-github"></i> GitHub
-    </a>
-    <a href="https://www.linkedin.com/in/anbuselvan01/" target="_blank">
-      <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
-  </div>
-</section>
+    <div class="contact-links">
+      <a href="mailto:anbuselvan32520@gmail.com">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="https://leetcode.com/u/AnbuselvanA/" target="_blank">
+        <i class="fas fa-code"></i> LeetCode
+      </a>
+      <a href="https://github.com/anbu-max" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/anbuselvan01/" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    </div>
+  </section>
 
-  
+
 
   <!-- Footer -->
   <footer class="footer">
@@ -159,4 +204,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
