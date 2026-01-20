@@ -1210,7 +1210,6 @@ body.dark .theme-toggle .fa-sun {
         padding: 2rem 1rem;
     }
 }
-/*Updated code*/
 
 @media (min-width: 1024px) {
     body {
@@ -1225,12 +1224,10 @@ body.dark .theme-toggle .fa-sun {
         font-size: 1.2rem;
     }
 
-    .info,
-    .blog-list {
+    .info {
         max-width: 1000px;
     }
 }
-/*Blog POST TEMPLATE Code*/
 
 /* Contact Section */
 .contact-container {
