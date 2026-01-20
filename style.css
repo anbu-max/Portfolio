@@ -169,11 +169,32 @@ body.dark .blog-nav ul.active {
 .hero h1 {
     font-size: 2.2rem;
     margin-bottom: 0.5rem;
+    animation: fadeInUp 1s ease-out 0.3s both;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    cursor: default;
+}
+
+.hero h1:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 }
 
 .hero p {
     font-size: 1rem;
     color: #555;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .btn {
@@ -385,8 +406,9 @@ body.dark .blog-nav ul.active {
 }
 
 .github-link:hover {
-    color: #24292e;
-    background: rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    background: #007bff;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
     transform: scale(1.1);
 }
 
@@ -467,6 +489,188 @@ body.dark .blog-nav ul.active {
   font-weight: 500;
   opacity: 0.85;
   text-align: center;
+}
+
+/* Skills Section Animations */
+.skills {
+  padding: 4rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 0 2rem;
+  max-height: 600px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+/* Individual skill hover effects with specific colors */
+.skill:nth-child(1):hover { /* Java */
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+}
+
+.skill:nth-child(2):hover { /* Python */
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.skill:nth-child(3):hover { /* HTML */
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+}
+
+.skill:nth-child(4):hover { /* CSS */
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.skill:nth-child(5):hover { /* JavaScript */
+  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
+}
+
+.skill:nth-child(6):hover { /* React */
+  box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4);
+}
+
+.skill:nth-child(7):hover { /* Spring Boot */
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+}
+
+.skill:nth-child(8):hover { /* Git */
+  box-shadow: 0 8px 25px rgba(251, 146, 60, 0.4);
+}
+
+.skill:nth-child(9):hover { /* GitHub */
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.skill:nth-child(10):hover { /* PostgreSQL */
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.skill:nth-child(11):hover { /* Postman */
+  box-shadow: 0 8px 25px rgba(251, 146, 60, 0.4);
+}
+
+.skill:nth-child(12):hover { /* SQL */
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+/* Enhanced icon hover effects with color transitions */
+.skill:nth-child(1) .fa-java:hover { /* Java */
+  color: #ed1d24;
+  filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.6));
+}
+
+.skill:nth-child(1):hover span { /* Java text glow */
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
+}
+
+.skill:nth-child(2) .fa-python:hover { /* Python */
+  color: #3776ab;
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
+}
+
+.skill:nth-child(2):hover span { /* Python text glow */
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+}
+
+.skill:nth-child(3) .fa-html5:hover { /* HTML */
+  color: #e34f26;
+  filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.6));
+}
+
+.skill:nth-child(3):hover span { /* HTML text glow */
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
+}
+
+.skill:nth-child(4) .fa-css3-alt:hover { /* CSS */
+  color: #1572b6;
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
+}
+
+.skill:nth-child(4):hover span { /* CSS text glow */
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+}
+
+.skill:nth-child(5) .fa-js:hover { /* JavaScript */
+  color: #f7df1e;
+  filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.6));
+}
+
+.skill:nth-child(5):hover span { /* JavaScript text glow */
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.6);
+}
+
+.skill:nth-child(6) .fa-react:hover { /* React */
+  color: #61dafb;
+  filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.6));
+}
+
+.skill:nth-child(6):hover span { /* React text glow */
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.6);
+}
+
+.skill:nth-child(7) img:hover { /* Spring Boot */
+  filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.6));
+}
+
+.skill:nth-child(7):hover span { /* Spring Boot text glow */
+  text-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+}
+
+.skill:nth-child(8) .fa-git-alt:hover { /* Git */
+  color: #f05032;
+  filter: drop-shadow(0 0 8px rgba(251, 146, 60, 0.6));
+}
+
+.skill:nth-child(8):hover span { /* Git text glow */
+  text-shadow: 0 0 8px rgba(251, 146, 60, 0.6);
+}
+
+.skill:nth-child(9) .fa-github:hover { /* GitHub */
+  color: #333;
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
+}
+
+.skill:nth-child(9):hover span { /* GitHub text glow */
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+}
+
+.skill:nth-child(10) img:hover { /* PostgreSQL */
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
+}
+
+.skill:nth-child(10):hover span { /* PostgreSQL text glow */
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+}
+
+.skill:nth-child(11) img:hover { /* Postman */
+  filter: drop-shadow(0 0 8px rgba(251, 146, 60, 0.6));
+}
+
+.skill:nth-child(11):hover span { /* Postman text glow */
+  text-shadow: 0 0 8px rgba(251, 146, 60, 0.6);
+}
+
+.skill:nth-child(12) .fa-database:hover { /* SQL */
+  color: #336791;
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
+}
+
+.skill:nth-child(12):hover span { /* SQL text glow */
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
 }
 
 
@@ -581,11 +785,20 @@ body.dark .hero {
 
 body.dark .hero h1 {
     color: #ffffff;
+    animation: fadeInUp 1s ease-out 0.3s both;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    cursor: default;
+}
+
+body.dark .hero h1:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 }
 
 body.dark .hero p {
     color: #ffffff;
     opacity: 0.9;
+    animation: fadeInUp 1s ease-out 0.6s both;
 }
 
 body.dark .quote {
@@ -662,8 +875,9 @@ body.dark .github-link {
 }
 
 body.dark .github-link:hover {
-    color: #f5f5f5;
-    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    background: #007bff;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
 }
 
 body.dark .skills {
@@ -683,8 +897,143 @@ body.dark .skill:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
+/* Dark mode skill hover effects with specific colors */
+body.dark .skill:nth-child(1):hover { /* Java */
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+}
+
+body.dark .skill:nth-child(2):hover { /* Python */
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+body.dark .skill:nth-child(3):hover { /* HTML */
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+}
+
+body.dark .skill:nth-child(4):hover { /* CSS */
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+body.dark .skill:nth-child(5):hover { /* JavaScript */
+  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.3);
+}
+
+body.dark .skill:nth-child(6):hover { /* React */
+  box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);
+}
+
+body.dark .skill:nth-child(7):hover { /* Spring Boot */
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
+}
+
+body.dark .skill:nth-child(8):hover { /* Git */
+  box-shadow: 0 8px 25px rgba(251, 146, 60, 0.3);
+}
+
+body.dark .skill:nth-child(9):hover { /* GitHub */
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+body.dark .skill:nth-child(10):hover { /* PostgreSQL */
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+body.dark .skill:nth-child(11):hover { /* Postman */
+  box-shadow: 0 8px 25px rgba(251, 146, 60, 0.3);
+}
+
+body.dark .skill:nth-child(12):hover { /* SQL */
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* Dark mode icon color changes */
+body.dark .skill:nth-child(1) .fa-java:hover { /* Java */
+  color: #ed1d24;
+}
+
+body.dark .skill:nth-child(2) .fa-python:hover { /* Python */
+  color: #3776ab;
+}
+
+body.dark .skill:nth-child(3) .fa-html5:hover { /* HTML */
+  color: #e34f26;
+}
+
+body.dark .skill:nth-child(4) .fa-css3-alt:hover { /* CSS */
+  color: #1572b6;
+}
+
+body.dark .skill:nth-child(5) .fa-js:hover { /* JavaScript */
+  color: #f7df1e;
+}
+
+body.dark .skill:nth-child(6) .fa-react:hover { /* React */
+  color: #61dafb;
+}
+
+body.dark .skill:nth-child(8) .fa-git-alt:hover { /* Git */
+  color: #f05032;
+}
+
+body.dark .skill:nth-child(9) .fa-github:hover { /* GitHub */
+  color: #ffffff;
+}
+
+body.dark .skill:nth-child(12) .fa-database:hover { /* SQL */
+  color: #336791;
+}
+
 body.dark .skill span {
     color: #ffffff;
+}
+
+/* Dark mode skill text glow effects */
+body.dark .skill:nth-child(1):hover span { /* Java text glow */
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+}
+
+body.dark .skill:nth-child(2):hover span { /* Python text glow */
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+body.dark .skill:nth-child(3):hover span { /* HTML text glow */
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+}
+
+body.dark .skill:nth-child(4):hover span { /* CSS text glow */
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+body.dark .skill:nth-child(5):hover span { /* JavaScript text glow */
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+}
+
+body.dark .skill:nth-child(6):hover span { /* React text glow */
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+}
+
+body.dark .skill:nth-child(7):hover span { /* Spring Boot text glow */
+  text-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
+}
+
+body.dark .skill:nth-child(8):hover span { /* Git text glow */
+  text-shadow: 0 0 8px rgba(251, 146, 60, 0.5);
+}
+
+body.dark .skill:nth-child(9):hover span { /* GitHub text glow */
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+body.dark .skill:nth-child(10):hover span { /* PostgreSQL text glow */
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+body.dark .skill:nth-child(11):hover span { /* Postman text glow */
+  text-shadow: 0 0 8px rgba(251, 146, 60, 0.5);
+}
+
+body.dark .skill:nth-child(12):hover span { /* SQL text glow */
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
 }
 
 body.dark .contact-container {
@@ -705,7 +1054,8 @@ body.dark .contact-links a {
 }
 
 body.dark .contact-links a:hover {
-    color: #ffffff;
+    color: #007bff;
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
 body.dark .footer,
@@ -925,7 +1275,8 @@ body.dark .theme-toggle .fa-sun {
 
 .contact-links a:hover {
     transform: scale(1.05);
-    color: #000;
+    color: #007bff;
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
 /* Information Section */
