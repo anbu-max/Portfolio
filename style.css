@@ -190,6 +190,25 @@ body.dark .blog-nav ul.active {
     text-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 }
 
+.cursor {
+    display: inline-block;
+    width: 4px;
+    height: 1em;
+    background-color: #333;
+    animation: blink 1s infinite;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+body.dark .cursor {
+    background-color: #fff;
+}
+
 .hero p {
     font-size: 1.4rem;
     color: #555;
