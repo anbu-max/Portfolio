@@ -1256,6 +1256,7 @@ body.dark .theme-toggle .fa-sun {
     .menu-btn {
         display: block;
         margin-right: 1rem;
+        margin-left: 0;
         z-index: 1001; /* Ensure above drawer */
         position: relative;
     }

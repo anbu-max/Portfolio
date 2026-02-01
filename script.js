@@ -26,7 +26,7 @@ function createMenuButton() {
   menuBtn.classList.add('menu-btn');
   menuBtn.innerHTML = '<i class="fas fa-bars"></i>'; // hamburger icon
 
-  navbar.appendChild(menuBtn);
+  navbar.insertBefore(menuBtn, navbar.firstChild);
 
   menuBtn.addEventListener('click', () => {
 
