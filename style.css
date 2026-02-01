@@ -236,23 +236,7 @@ body.dark .blog-nav ul.active {
 }
 
 .download-resume-wrap {
-    position: relative;
     display: inline-block;
-    border-radius: 10px;
-    padding: 6px;
-}
-
-.download-resume-wrap::before {
-    content: "";
-    position: absolute;
-    inset: -6px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.06);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    pointer-events: none;
-    z-index: 0;
-    transition: opacity 0.18s ease;
 }
 
 .download-resume-btn {
