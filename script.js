@@ -24,9 +24,9 @@ function createMenuButton() {
 
   menuBtn = document.createElement('div');
   menuBtn.classList.add('menu-btn');
-  menuBtn.innerHTML = "☰"; // hamburger icon
+  menuBtn.innerHTML = '<i class="fas fa-bars"></i>'; // hamburger icon
 
-  navbar.insertBefore(menuBtn, nav);
+  navbar.appendChild(menuBtn);
 
   menuBtn.addEventListener('click', () => {
 

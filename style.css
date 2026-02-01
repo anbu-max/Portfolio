@@ -44,7 +44,7 @@ ul {
 .navbar {
     display: flex;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1.5rem 3rem;
     background: #fff;
     position: sticky;
     top: 0;
@@ -67,7 +67,7 @@ ul {
     display: flex;
     gap: 2rem;
     align-items: center;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 500;
 }
 
@@ -158,8 +158,10 @@ body.dark .menu-btn:hover {
 
 body.dark .navbar nav .nav-links.active,
 body.dark .blog-nav ul.active {
-    background: #1a1a1a;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 /* Hero Section */
@@ -1196,45 +1198,67 @@ body.dark .theme-toggle .fa-sun {
         margin-right: 1rem;
     }
 
-    .navbar > nav,
-    .blog-nav {
-        flex: 1;
-        justify-content: flex-end;
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .navbar > nav {
+        position: static;
+        transform: none;
+        flex: 0; /* Don't take up all space */
+    }
+
+    .navbar nav .theme-toggle {
+        position: relative; /* Be part of the flow */
+        right: auto;
     }
 
     .navbar nav .nav-links,
     .blog-nav ul {
-        display: none;
-        gap: 1rem;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #fff;
-        padding: 1rem;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 0 0 8px 8px;
+        display: flex;
         flex-direction: column;
-        align-items: stretch;
+        align-items: flex-start;
+        gap: 1.5rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 70%; /* Covers 70% of screen width */
+        max-width: 300px;
+        background: rgba(255, 255, 255, 1);
+        backdrop-filter: blur(10px);
+        padding: 5rem 2rem 2rem 2rem; /* Top padding to clear area, though it's on top */
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+        transform: translateX(-100%); /* Start off-screen left */
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 999;
+        border-right: 1px solid rgba(0,0,0,0.05);
+        border-bottom: none;
+        height: 100vh;
     }
 
 
     .navbar nav .nav-links.active,
     .blog-nav ul.active {
-    display: flex;
-
+        transform: translateX(0); /* Slide in */
+        opacity: 1;
+        visibility: visible;
     }
 
     .navbar nav .theme-toggle,
     .blog-nav + .theme-toggle {
-        position: absolute;
-        right: 2rem;
+        position: static;
+        right: auto;
     }
 
     .menu-btn {
         display: block;
         margin-right: 1rem;
-}
+        z-index: 1001; /* Ensure above drawer */
+        position: relative;
+    }
 
 
     .hero {
