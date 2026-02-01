@@ -12,6 +12,23 @@ body {
     color: #222;
 }
 
+/* Scroll Progress Bar */
+.progress-container {
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1002;
+}
+.progress-bar {
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #00d2ff);
+    width: 0%;
+    transition: width 0.1s ease-out;
+}
+
 body {
     font-family: 'Inter', sans-serif;
 }
@@ -638,17 +655,17 @@ body.dark .cursor {
 
 
 /* Enhanced icon hover effects with color transitions */
-.skill:nth-child(1) .fa-java:hover { /* Java */
+.skill:nth-child(1):hover .fa-java { /* Java */
   color: #ed1d24;
   filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.6));
-    }
+}
 
 
 .skill:nth-child(1):hover span { /* Java text glow */
   text-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
 }
 
-.skill:nth-child(2) .fa-python:hover { /* Python */
+.skill:nth-child(2):hover .fa-python { /* Python */
   color: #3776ab;
   filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
 }
@@ -657,7 +674,7 @@ body.dark .cursor {
   text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
 }
 
-.skill:nth-child(3) .fa-html5:hover { /* HTML */
+.skill:nth-child(3):hover .fa-html5 { /* HTML */
   color: #e34f26;
   filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.6));
 }
@@ -666,27 +683,27 @@ body.dark .cursor {
   text-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
 }
 
-.skill:nth-child(4) .fa-css3-alt:hover { /* CSS */
+.skill:nth-child(4):hover .fa-css3-alt { /* CSS */
   color: #1572b6;
   filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
- }
+}
 
 
 .skill:nth-child(4):hover span { /* CSS text glow */
   text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
 }
 
-.skill:nth-child(5) .fa-js:hover { /* JavaScript */
+.skill:nth-child(5):hover .fa-js { /* JavaScript */
   color: #f7df1e;
   filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.6));
- }
+}
 
 
 .skill:nth-child(5):hover span { /* JavaScript text glow */
   text-shadow: 0 0 8px rgba(251, 191, 36, 0.6);
 }
 
-.skill:nth-child(6) .fa-react:hover { /* React */
+.skill:nth-child(6):hover .fa-react { /* React */
   color: #61dafb;
   filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.6));
 }
@@ -696,7 +713,7 @@ body.dark .cursor {
  }
 
 
-.skill:nth-child(7) img:hover { /* Spring Boot */
+.skill:nth-child(7):hover img { /* Spring Boot */
   filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.6));
 }
 
@@ -704,7 +721,7 @@ body.dark .cursor {
   text-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
 }
 
-.skill:nth-child(8) .fa-git-alt:hover { /* Git */
+.skill:nth-child(8):hover .fa-git-alt { /* Git */
   color: #f05032;
   filter: drop-shadow(0 0 8px rgba(251, 146, 60, 0.6));
 }
@@ -713,7 +730,7 @@ body.dark .cursor {
   text-shadow: 0 0 8px rgba(251, 146, 60, 0.6);
 }
 
-.skill:nth-child(9) .fa-github:hover { /* GitHub */
+.skill:nth-child(9):hover .fa-github { /* GitHub */
      color: #333;
 
   filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
@@ -724,7 +741,7 @@ body.dark .cursor {
   text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
 }
 
-.skill:nth-child(10) img:hover { /* PostgreSQL */
+.skill:nth-child(10):hover img { /* PostgreSQL */
   filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
 }
 
@@ -732,19 +749,19 @@ body.dark .cursor {
   text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
 }
 
-.skill:nth-child(11) img:hover { /* Postman */
+.skill:nth-child(11):hover img { /* Postman */
   filter: drop-shadow(0 0 8px rgba(251, 146, 60, 0.6));
- }
+}
 
 
 .skill:nth-child(11):hover span { /* Postman text glow */
   text-shadow: 0 0 8px rgba(251, 146, 60, 0.6);
 }
 
-.skill:nth-child(12) .fa-database:hover { /* SQL */
+.skill:nth-child(12):hover .fa-database { /* SQL */
   color: #336791;
   filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
- }
+}
 
 
 .skill:nth-child(12):hover span { /* SQL text glow */
