@@ -300,32 +300,64 @@ body.dark .cursor {
     font-size: 0.9rem;
 }
 
-/* Quote */
-.quote {
-    text-align: center;
-    padding: 8rem 2rem;
-    font-style: italic;
+/* About Section */
+.about-section {
+    padding: 6rem 2rem 3rem 2rem; /* Top padding, smaller bottom */
     background: #f9f9f9;
-    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* Reuse existing container styles */
+.about-container {
+    max-width: 1200px; /* Widened from 800px */
+    width: 90%; /* Dynamic, responsive width */
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.about-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-container p {
+    font-style: normal;
+    font-size: 1.4rem; 
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+}
+
+/* Quote Section (Independent) */
+.quote-section {
+    text-align: center;
+    padding: 3rem 2rem 6rem 2rem; /* Smaller top, larger bottom */
+    background: #f9f9f9; /* Same bg to look seamless or distinct */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.quote p {
-    font-size: 2.2rem;
+.quote-section p {
+    font-size: 1.5rem; 
     line-height: 1.4;
     max-width: 800px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    font-style: italic; /* Explicit italic */
+    opacity: 0.8; 
+    color: #555;
 }
 
-.quote span {
+.quote-section span {
     display: block;
     margin-top: 0.5rem;
-    font-weight: bold;
-    color: #333;
-    font-size: 1.2rem;
+    font-weight: 500;
+    color: #666;
+    font-size: 1rem;
 }
 
 /* Information Section */
@@ -713,12 +745,13 @@ body.dark .cursor {
  }
 
 
-.skill:nth-child(7):hover img { /* Spring Boot */
-  filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.6));
+.skill:nth-child(7):hover .fa-leaf { /* Spring Boot (Leaf icon) */
+  color: #6db33f;
+  filter: drop-shadow(0 0 8px rgba(109, 179, 63, 0.6));
 }
 
 .skill:nth-child(7):hover span { /* Spring Boot text glow */
-  text-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+  text-shadow: 0 0 8px rgba(109, 179, 63, 0.6);
 }
 
 .skill:nth-child(8):hover .fa-git-alt { /* Git */
@@ -741,21 +774,22 @@ body.dark .cursor {
   text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
 }
 
-.skill:nth-child(10):hover img { /* PostgreSQL */
-  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
+.skill:nth-child(10):hover .fa-server { /* PostgreSQL (Server icon) */
+  color: #336791;
+  filter: drop-shadow(0 0 8px rgba(51, 103, 145, 0.6));
 }
 
 .skill:nth-child(10):hover span { /* PostgreSQL text glow */
-  text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+  text-shadow: 0 0 8px rgba(51, 103, 145, 0.6);
 }
 
-.skill:nth-child(11):hover img { /* Postman */
-  filter: drop-shadow(0 0 8px rgba(251, 146, 60, 0.6));
+.skill:nth-child(11):hover .fa-paper-plane { /* Postman (Paper Plane icon) */
+  color: #FF6C37;
+  filter: drop-shadow(0 0 8px rgba(255, 108, 55, 0.6));
 }
-
 
 .skill:nth-child(11):hover span { /* Postman text glow */
-  text-shadow: 0 0 8px rgba(251, 146, 60, 0.6);
+  text-shadow: 0 0 8px rgba(255, 108, 55, 0.6);
 }
 
 .skill:nth-child(12):hover .fa-database { /* SQL */
@@ -858,8 +892,8 @@ body.dark {
 
 body.dark .navbar,
 body.dark .blog-nav {
-    background: #1a1a1a;
-    border-bottom: 1px solid #333;
+    background: #000000;
+    border-bottom: 1px solid #222;
 }
 
 body.dark .logo,
@@ -890,7 +924,7 @@ body.dark .theme-toggle:hover {
 }
 
 body.dark .hero {
-    background: #0a0a0a;
+    background: #000000;
 }
 
 body.dark .hero h1 {
@@ -911,18 +945,68 @@ body.dark .hero p {
     animation: fadeInUp 1s ease-out 0.6s both;
 }
 
-body.dark .quote {
-    background: #1a1a1a !important;
+/* Updated Quote Section for Dark Mode */
+body.dark .quote-section {
+    background: #000000 !important;
     color: #ffffff !important;
 }
 
-body.dark .quote span {
+body.dark .quote-section p {
+    color: #cccccc !important;
+    opacity: 0.8; 
+}
+
+body.dark .quote-section span {
+    color: #999999 !important;
+    opacity: 0.8;
+}
+
+/* Updated About Section for Dark Mode */
+body.dark .about-section {
+    background: #000000 !important;
     color: #ffffff !important;
-    opacity: 0.9;
+}
+
+body.dark .about-container p {
+    color: #ffffff !important;
+    opacity: 1; /* Bright white */
+}
+
+ /* Dark Mode overrides for Contact and Footer */
+body.dark .contact {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+body.dark .contact-content a {
+    color: #ffffff !important;
+}
+
+body.dark footer {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border-top: 1px solid #333;
+}
+
+body.dark footer p {
+    color: #ffffff !important;
+    opacity: 0.8;
+}
+
+/* Widen About Container */
+.about-container {
+    max-width: 1200px; /* Widened from 800px */
+    width: 90%; /* Dynamic width */
+    margin: 0 auto;
+    text-align: center;
+}
+
+body.dark .about-container h2 {
+    color: #ffffff;
 }
 
 body.dark .info {
-    background: #0a0a0a;
+    background: #000000;
     color: #ffffff;
 }
 
@@ -951,7 +1035,7 @@ body.dark .info-container a:hover {
 }
 
 body.dark .projects {
-    background: #1a1a1a;
+    background: #000000;
 }
 
 body.dark .projects h2 {
@@ -959,16 +1043,13 @@ body.dark .projects h2 {
 }
 
 body.dark .project-card {
-    background: #2a2a2a;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: #111111; /* Slightly lighter than pitch black for contrast */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+    border: 1px solid #222;
 }
 
 body.dark .project-card:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-body.dark .project-card {
-    background: #2a2a2a;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
 }
 
 body.dark .project-card:hover {
